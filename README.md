@@ -19,3 +19,8 @@ pip install -vvv --upgrade --force-reinstall --no-binary :all: --no-deps pysdd
 
 ## Commands
 Each of the three tasks includes a .sh script.
+
+## Datasets
+The Sudoku dataset can be found here: https://github.com/locuslab/SATNet
+
+The MNIST Perfect Matching and Warcraft Shorest Path datasets can be found here: https://github.com/martius-lab/blackbox-differentiation-combinatorial-solvers
