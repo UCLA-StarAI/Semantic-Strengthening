@@ -1,0 +1,39 @@
+{
+  "num_epochs": 1000,
+  "num_cpus": 20,
+  "use_ray": false,
+  "sl_weight": 0.005,
+  "K":10,
+  "interval": 5,
+  "loader_params": {
+    "data_dir": "data/mnist_matching/10x10_mnist_nonunique",
+    "use_test_set": false,
+    "evaluate_with_extra": false,
+    "normalize": true
+  },
+  "trainer_name": "Baseline",
+  "trainer_params": {
+    "use_cuda": true,
+    "edge_cost_fn_name": "10x",
+    "edge_cost_params": {},
+    "batch_size": 128,
+	"optimizer_name": "Adam",
+	"optimizer_params": {
+		"lr": 1e-2
+	},
+    "model_params": {
+      "model_name": "ResNet18",
+      "arch_params": {}
+    },
+    "compute_all_train_metrics": false,
+    "preload_batch": true,
+    "lr_milestone_1": 60,
+    "lr_milestone_2": 70,
+    "use_lr_scheduling": false
+  },
+  "model_dir": "results/{timestamp}",
+  "problem_type": "mnist_perfect_matching",
+  "evaluate_every": 1,
+  "save_visualizations": false
+}
+
