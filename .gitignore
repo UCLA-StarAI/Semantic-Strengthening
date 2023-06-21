@@ -1,10 +1,8 @@
-/data/
 /data/globe_tsp/
 /data/mnist_matching/
 /data/warcraft_maps/
 data/mnist_matching/
 **/__pycache__/
-**/*.sdd
 **/*.pt
 sudoku/sudoku.zip
 /data/warcraft_shortest_path
