@@ -26,12 +26,13 @@ import itertools
 # Semantic Loss
 from compute_mpe import CircuitMPE
 import sys
+import os
 
 timings = None
 
-sys.path.insert(0, '../pypsdd')
-inner = CircuitMPE('data/inner.vtree', 'data/inner.sdd')
-start_or_end = CircuitMPE('data/start_or_end.vtree', 'data/start_or_end.sdd')
+sys.path.insert(0, os.path.join('..', 'pypsdd'))
+inner = CircuitMPE(os.path.join('data', 'inner.vtree'),os.path.join('data', 'inner.sdd'))
+start_or_end = CircuitMPE(os.path.join('data', 'start_or_end.vtree'), os.path.join('data', 'start_or_end.sdd'))
 delta = [(-1,-1),(0,-1),(1,-1),(1,0),(1,1),(0,1),(-1,1),(-1,0)]
 
 cuda1 = torch.device('cuda:0')
