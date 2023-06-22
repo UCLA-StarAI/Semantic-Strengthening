@@ -6,8 +6,8 @@ if os.path.exists(PATH):
     print("File already exists... exiting")
     exit()
 sys.argv = sys.argv[:-1]
-sys.stdout = open(PATH, 'w')
-sys.stderr = sys.stdout
+#sys.stdout = open(PATH, 'w')
+#sys.stderr = sys.stdout
 
 from logging import WARNING
 import warnings
